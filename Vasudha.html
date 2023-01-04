@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Vasudha Khanna</title>
+        <link rel="shortcut icon" href="media/logo.png" />
+      
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+      
+        <!-- Custom CSS: This stylesheet is to override any Bootstrap styles and apply own styles -->
+        <link href="css/custom.css" rel="stylesheet">
+      
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+      
+        <!-- Custom Fonts from Google -->
+        <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel='stylesheet' type='text/css'>
+      
+        <!-- Title & Fav Icons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/fav/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/fav/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/fav/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/fav/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+      
+    </head>
+    <body>
+        <div class="main">
+            <div id="navbar">
+                <a href="#default" id="logo"><img id = "header-image" src="media/logo.png" height="100px">  Vasudha Khanna</a>
+                <div id="navbar-right">
+                  <a class="active" href="#introdiv">Home</a> 
+                  <a class ="navbar-text" href="#organizationdiv">Organizations</a> 
+                  <a class ="navbar-text" href="#about">Features</a> 
+                  <a class ="navbar-text"href="#about">Passions</a> 
+                  <a class ="navbar-text"href="#about">Skillset</a> 
+                  <a class ="navbar-text"href="#about">Connect</a>  
+                </div>
+              </div>
+              <!-- <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+                <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
+                <p>Scroll down this frame to see the effect!</p>
+                <p>Scroll to the top to remove the effect.</p>
+                <p><b>Note:</b> We have also made the navbar responsive, resize the browser window to see the effect.</p>
+                <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div> -->
+              <script>
+                // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("navbar").style.padding = "20px 5 px";
+                    document.getElementById("navbar").style.height = "50px";
+                    document.getElementById("logo").style.fontSize = "25px";
+                    document.getElementById("header-image").style.height = "40px";
+                    document.getElementById("navbar").style.height = "50px";
+                  } else {
+                    document.getElementById("navbar").style.padding = "80px 10px";
+                    document.getElementById("logo").style.fontSize = "35px";
+                  }
+                }
+                </script>
+               
+                <div class="intro" id="introdiv">
+                    <div id="intro-img">
+                    <img src="media/header.jpg" height=300px >
+                 
+                    </div>
+                    <div id="intro-text"><h1>Sky is the limit!</h1></div>
+
+                </div>
+             
+                <div class="organization">
+                    <h1>Organizations</h1>
+                    <img class="org-slide" src="media/dotData.png" >
+                    <img class="org-slide" src="media/CDIS.jpeg" style="max-width:100%">
+                    <img class="org-slide" src="media/guts.jpg" style="max-width:100%">
+                    <img class="org-slide" src="media/frn.jpg" style="max-width:100%">
+                    <img class="org-slide" src="media/dishlogo.jpg" style="max-width:100%">
+
+                </div>
+                <script>
+                    var myIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                      var i;
+                      var x = document.getElementsByClassName("org-slide");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      myIndex++;
+                      if (myIndex > x.length) {myIndex = 1}    
+                      x[myIndex-1].style.display = "block";  
+                      setTimeout(carousel, 2000); // Change image every 2 seconds
+                    }
+                    </script>
+
+                      
+                      
+                    </div>
+
+                    <!-- <div class=projects>
+                      <h1>Projects</h1>
+                      
+                    <div class="container project_list">
+                       <div class="grid-item crib"><img src="media/crib.jpg" style ="width:100px"></div>
+                       <div class="grid-item stock"><img src="media/stock.jpg" style="width:100px"></div>
+                       <div class="grid-item path"><img src="media/uw.jpg" style="width:100px"></div>
+                        <div class="grid-item ungerrymanderer"><img src="media/datathon.png" style="width:100%"></div>
+                       <div class="grid-item genetics"><img src="media/genetics.jpeg" style="width:100%"></div>
+                       <div class="grid-item journal"><img src="media/code4good.jpeg" style="width:100%"></div>
+                       <div class="grid-item automl"><img src="media/ml.jpeg" style="width:100%"></div>
+                    </div>
+                  </div> -->
+                   <!-- Footer -->
+          <footer class="page-footer">
+                  <!-- Contact Us -->
+            <div class="contact" id="socials">
+              <div class="container">
+
+                <h2 class="section-heading">Get Connected!!</h2>
+                <p>
+                  <br>
+                  <a href="https://www.instagram.com/vasudha.khanna2/"><img src="media/instagram.png" style="height: 50px;" float="centre"></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.youtube.com/channel/UCxS1_cz53xz7WYj1E4BYRvg?view_as=subscriber"><img src="media/youtube.png" style="height: 70px;"></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.linkedin.com/in/vasudhakhanna2/"><img src="media/linkedin.png"style="height: 57px;"></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://github.com/vkhanna7"><img src="media/github.jpg" style="height: 50px;"></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://devpost.com/GAInTheHouse"><img src="media/devpost.png" style="height: 50px;"></a>
+                  <a href="https://devpost.com/GAInTheHouse"><img src="media/gmail.png" style="height: 50px; padding-left: 25px;"></a>
+                  <br><br>
+                  <a href="/cdn-cgi/l/email-protection#4c2b2d3938250c2b2d25223824292423393f29622f2321">
+                    <span class="glyphicon glyphicon-envelope" style="color:white;"></span>
+                    <br><span class="__cf_email__" data-cfemail="5c3b3d2928351c3b3d35322834393433292f39723f3331">[email&#160;protected]</span>
+                  </a>
+                </p>
+              </div>
+              </div>
+
+              <!-- Copyright etc -->
+            <div class="small-print">
+              <div class="container">
+                <p>
+                  Made by Vasudha Khanna
+                </p>
+              </div>
+            </div>
+              </footer>
+            </div>
+            <!-- jQuery -->
+          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-1.11.3.min.js"></script>
+
+          <!-- Bootstrap Core JavaScript -->
+          <script src="js/bootstrap.min.js"></script>
+
+          <!-- Plugin JavaScript -->
+          <script src="js/jquery.easing.min.js"></script>
+
+          <!-- Custom Javascript -->
+          <script src="js/custom.js"></script>
+
+                    
+    </body>    
+</html>
