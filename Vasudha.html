@@ -85,13 +85,53 @@
                
                 <div class="intro" id="introdiv">
                     <div id="intro-img">
-                    <img src="media/header.jpg" height=300px >
-                 
+                    <img src="media/header.jpg" height=300px  style="padding-left:15px;" >
                     </div>
-                    <div id="intro-text"><h1>Sky is the limit!</h1></div>
+                    <div id="intro-text"><h1>Software Engineer | Founder | Creator | Learner | Seeker </h1>
+                      <br>
+                      <h2> Hi! Let me introduce myself.</h2>
+                      <br>
+                      <br>
+                      <p style="font-size:15px;">
+                        I am pursuing B.S. Science Computer Science from UW-Madison, graduating class of 2025. I am seeking oporuntinities across industries where I can apply my computer skills. An explorer and quick learner I strive for new opportunities to challenge myself.
+                       </p>
+                    </div>
 
                 </div>
-             
+             <!-- Skills -->
+                <div class="skills">
+                  <h1 style="text-align: center;">Skills</h1>
+                  <h2 style="text-align: center;">I am strong in research and coding. Here are some of my highlight skills </h2>
+                  
+                  <br>
+                  <h3 style="padding-left:10%">Python</h3>
+                  <div class="container-skills">
+                    <div class="skills python">95%</div>
+                  </div>
+                  <br>
+                  <h3 style="padding-left:10%">Java</h3>
+                  <div class="container-skills">
+                    <div class="skills java">95%</div>
+                  </div>
+                  <br>
+                  <h3 style="padding-left:10%">Javascript/HTML</h3>
+                  <div class="container-skills">
+                    <div class="skills html">90%</div>
+                  </div>
+                  <br>
+                  <h3 style="padding-left:10%">C#/.NET</h3>
+                  <div class="container-skills">
+                    <div class="skills c">70%</div>
+                  </div>
+                  <br>
+                  <br>
+                  <h1 style="text-align: center;">Please look at my resume to get my full list of skills and experiences!</h1>
+                  
+                  <button class="button"><a class="button-text" href="#contact">Reach Out!</a></button>
+                  <button class="button"><a class="button-text" href="media/Resume_Vasudha Khanna.pdf">Resume</a></button>  
+                </div>
+
+
                 <div class="organization">
                     <h1>Organizations</h1>
                     <img class="org-slide" src="media/dotData.png" >
@@ -135,6 +175,85 @@
                        <div class="grid-item automl"><img src="media/ml.jpeg" style="width:100%"></div>
                     </div>
                   </div> -->
+
+                  <div class="honor">
+                    <h1>Honors</h1>
+                    <!-- Full-width images with number text -->
+                    <div class="honor-slide">
+                      <div class="numbertext">1 / 4</div>
+                        <img src="media/Dean's.jpg"  style="height:130%">
+                    </div>
+                  
+                    <div class="honor-slide">
+                      <div class="numbertext">2 / 4</div>
+                        <img src="media/AutoML'22.jpg" style="height:130%">
+                    </div>
+                  
+                    <div class="honor-slide">
+                      <div class="numbertext">3 / 4</div>
+                        <img src="media/daathon'21.jpg" style="height:130%">
+                    </div>
+                  
+                    <div class="honor-slide">
+                      <div class="numbertext">4 / 4</div>
+                        <img src="media/IMO'21.jpg" style="height:130%">
+                    </div>
+                  
+                    
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  
+                   
+                  <br><br><br>
+                    <!-- Thumbnail images -->
+                    <div class="row">
+                      <div class="column">
+                        <img class="demo cursor" src="media/uwlog.jpeg" style="height:60px;" onclick="currentSlide(1)" alt="The Woods">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="media/automl.jpeg" style="height:60px;" onclick="currentSlide(2)" alt="Cinque Terre">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="media/dotdata.jpeg" style="height:60px;" onclick="currentSlide(3)" alt="Mountains and fjords">
+                      </div>
+                      <div class="column">
+                        <img class="demo cursor" src="media/sof.jpg" style="height:60px;" onclick="currentSlide(4)" alt="Northern Lights">
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                // Next/previous controls
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                // Thumbnail image controls
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("honor-slide");
+                  let dots = document.getElementsByClassName("demo");
+                  let captionText = document.getElementById("caption");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                  captionText.innerHTML = dots[slideIndex-1].alt;
+                }
+                  </script>
                    <!-- Footer -->
           <footer class="page-footer">
                   <!-- Contact Us -->
@@ -168,6 +287,8 @@
               </div>
             </div>
               </footer>
+
+              
             </div>
             <!-- jQuery -->
           <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-1.11.3.min.js"></script>
