@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Vasudha Khanna</title>
+    <link rel="shortcut icon" href="media/logo.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Custom CSS: This stylesheet is to override any Bootstrap styles and apply own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+  
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Custom Fonts from Google -->
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel='stylesheet' type='text/css'>
+  
+    <!-- Title & Fav Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <body>
+      <div class="main">
+          <div id="navbar">
+              <a href="#default" id="logo"><img id = "header-image" src="media/logo.png" height="100px">  Vasudha Khanna</a>
+              <div id="navbar-right">
+                <a class="active" href="#introdiv">Home</a> 
+                <a class ="navbar-text" href="#skills-div">Skills</a> 
+                <a class ="navbar-text" href="#org-div">Organizations</a> 
+                <a class ="navbar-text"href="#honor-div">Honors</a> 
+                <!-- <a class ="navbar-text"href="#about">Passions</a>  -->
+                <a class ="navbar-text"href="#socials">Connect</a>  
+              </div>
+            </div>
+            <!-- <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+              <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
+              <p>Scroll down this frame to see the effect!</p>
+              <p>Scroll to the top to remove the effect.</p>
+              <p><b>Note:</b> We have also made the navbar responsive, resize the browser window to see the effect.</p>
+              <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div> -->
+            <script>
+              // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+              window.onscroll = function() {scrollFunction()};
+              
+              function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                  document.getElementById("navbar").style.padding = "20px 5 px";
+                  document.getElementById("navbar").style.height = "50px";
+                  document.getElementById("logo").style.fontSize = "25px";
+                  document.getElementById("header-image").style.height = "40px";
+                  document.getElementById("navbar").style.height = "50px";
+                } else {
+                  document.getElementById("navbar").style.padding = "80px 10px";
+                  document.getElementById("logo").style.fontSize = "35px";
+                }
+              }
+              </script>
+             
+              <div class="intro" id="introdiv">
+                  <div id="intro-img">
+                  <img src="media/header.jpg" height=300px  style="padding-left:15px;" >
+                  </div>
+                  <div id="intro-text"><h1>Software Engineer | Founder | Creator | Learner | Seeker </h1>
+                    <br>
+                    <h2> Hi! Let me introduce myself.</h2>
+                    <br>
+                    <br>
+                    <p style="font-size:15px;">
+                      I am pursuing B.S. Science Computer Science from UW-Madison, graduating class of 2025. I am seeking oporuntinities across industries where I can apply my computer skills. An explorer and quick learner I strive for new opportunities to challenge myself.
+                     </p>
+                  </div>
+
+              </div>
+           <!-- Skills -->
+              <div class="skills">
+                <h1 style="text-align: center;"  id="skills-div">Skills</h1>
+                <h2 style="text-align: center;">I am strong in research and coding. Here are some of my highlight skills </h2>
+                
+                <br>
+                <h3 style="padding-left:10%">Python</h3>
+                <div class="container-skills">
+                  <div class="skills python">95%</div>
+                </div>
+                <br>
+                <h3 style="padding-left:10%">Java</h3>
+                <div class="container-skills">
+                  <div class="skills java">95%</div>
+                </div>
+                <br>
+                <h3 style="padding-left:10%">Javascript/HTML</h3>
+                <div class="container-skills">
+                  <div class="skills html">90%</div>
+                </div>
+                <br>
+                <h3 style="padding-left:10%">C#/.NET</h3>
+                <div class="container-skills">
+                  <div class="skills c">70%</div>
+                </div>
+                <br>
+                <br>
+                <h1 style="text-align: center;">Please look at my resume to get my full list of skills and experiences!</h1>
+                
+                <button class="button"><a class="button-text" href="#socials">Reach Out!</a></button>
+                <button class="button"><a class="button-text" href="media/Resume_Vasudha Khanna.pdf">Resume</a></button>  
+              </div>
+
+
+              <div class="organization"  id="org-div">
+                  <h1>Organizations</h1>
+                  <img class="org-slide" src="media/dotData.png" >
+                  <img class="org-slide" src="media/CDIS.jpeg" style="max-width:100%">
+                  <img class="org-slide" src="media/guts.jpg" style="max-width:100%">
+                  <img class="org-slide" src="media/frn.jpg" style="max-width:100%">
+                  <img class="org-slide" src="media/dishlogo.jpg" style="max-width:100%">
+
+              </div>
+              <script>
+                  var myIndex = 0;
+                  carousel();
+                  
+                  function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("org-slide");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 2000); // Change image every 2 seconds
+                  }
+                  </script>
+
+                    
+                    
+                  </div>
+
+                  <!-- <div class=projects>
+                    <h1>Projects</h1>
+                    
+                  <div class="container project_list">
+                     <div class="grid-item crib"><img src="media/crib.jpg" style ="width:100px"></div>
+                     <div class="grid-item stock"><img src="media/stock.jpg" style="width:100px"></div>
+                     <div class="grid-item path"><img src="media/uw.jpg" style="width:100px"></div>
+                      <div class="grid-item ungerrymanderer"><img src="media/datathon.png" style="width:100%"></div>
+                     <div class="grid-item genetics"><img src="media/genetics.jpeg" style="width:100%"></div>
+                     <div class="grid-item journal"><img src="media/code4good.jpeg" style="width:100%"></div>
+                     <div class="grid-item automl"><img src="media/ml.jpeg" style="width:100%"></div>
+                  </div>
+                </div> -->
+
+                <div class="honor"  id="honor-div">
+                  <h1>Honors</h1>
+                  <!-- Full-width images with number text -->
+                  <div class="honor-slide">
+                    <div class="numbertext">1 / 4</div>
+                      <img src="media/Dean's.jpg"  style="height:130%">
+                  </div>
+                
+                  <div class="honor-slide">
+                    <div class="numbertext">2 / 4</div>
+                      <img src="media/AutoML'22.jpg" style="height:130%">
+                  </div>
+                
+                  <div class="honor-slide">
+                    <div class="numbertext">3 / 4</div>
+                      <img src="media/daathon'21.jpg" style="height:130%">
+                  </div>
+                
+                  <div class="honor-slide">
+                    <div class="numbertext">4 / 4</div>
+                      <img src="media/IMO'21.jpg" style="height:130%">
+                  </div>
+                
+                  
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                 
+                <br><br><br>
+                  <!-- Thumbnail images -->
+                  <div class="row">
+                    <div class="column">
+                      <img class="demo cursor" src="media/uwlog.jpeg" style="height:60px;" onclick="currentSlide(1)" alt="The Woods">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="media/automl.jpeg" style="height:60px;" onclick="currentSlide(2)" alt="Cinque Terre">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="media/dotdata.jpeg" style="height:60px;" onclick="currentSlide(3)" alt="Mountains and fjords">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="media/sof.jpg" style="height:60px;" onclick="currentSlide(4)" alt="Northern Lights">
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  let slideIndex = 1;
+              showSlides(slideIndex);
+              
+              // Next/previous controls
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+              
+              // Thumbnail image controls
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+              
+              function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("honor-slide");
+                let dots = document.getElementsByClassName("demo");
+                let captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+              }
+                </script>
+                 <!-- Footer -->
+        <footer class="page-footer">
+                <!-- Contact Us -->
+          <div class="contact" id="socials">
+            <div class="container">
+
+              <h2 class="section-heading" style="color:azure">Get Connected!!</h2>
+              <p>
+                <br>
+                <div class="socials">
+                <a href="https://www.instagram.com/vasudha.khanna2/"><img src="media/instagram.png" style="height: 50px;" float="centre"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.youtube.com/@vasudhakhanna9396"><img src="media/youtube.png" style="height: 70px;"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/vasudhakhanna2/"><img src="media/linkedin.png"style="height: 57px;"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/vkhanna7"><img src="media/github.jpg" style="height: 50px;"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://devpost.com/vkhanna7?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><img src="media/devpost.png" style="height: 50px;"></a>
+                <a href=mailto:"vasudhakhannaofficial@gmail.com"><img src="media/gmail.png" style="height: 50px; padding-left: 25px;"></a>
+                <br><br>
+                </div>
+              </p>
+            </div>
+            </div>
+
+            <!-- Copyright etc -->
+          <div class="small-print">
+            <div class="container">
+              <span class="glyphicon glyphicon-copyright-mark" style="color:azure"> Made by Vasudha Khanna</span>
+            </div>
+          </div>
+            </footer>
+
+            
+          </div>
+          <!-- jQuery -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-1.11.3.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery.easing.min.js"></script>
+
+        <!-- Custom Javascript -->
+        <script src="js/custom.js"></script>
+  
+        <script type="module">
+          // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+          import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+          // TODO: Add SDKs for Firebase products that you want to use
+          // https://firebase.google.com/docs/web/setup#available-libraries
+        
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          const firebaseConfig = {
+            apiKey: "AIzaSyA_0vNjsw6NzeGZmfH9xMEyDhZPftPdIaw",
+            authDomain: "vasudhakhanna-922ec.firebaseapp.com",
+            projectId: "vasudhakhanna-922ec",
+            storageBucket: "vasudhakhanna-922ec.appspot.com",
+            messagingSenderId: "381678583180",
+            appId: "1:381678583180:web:d55e64f69cad54dde46aa9",
+            measurementId: "G-EMS4QGQ46J"
+          };
+        
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+          const analytics = getAnalytics(app);
+        </script>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>

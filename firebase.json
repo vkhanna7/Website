@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "vasudha",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
