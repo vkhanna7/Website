@@ -51,6 +51,7 @@ body {
 #navbar a.active {
   background-color: #4576b1;
   color: white;
+  transition: 0.4s;
 }
 
 #navbar-right {
@@ -77,6 +78,7 @@ body {
 
 .navbar-text{
     color : white;
+    transition: 0.4s;
 }
 
 .intro{
