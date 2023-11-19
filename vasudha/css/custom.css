@@ -417,11 +417,36 @@ body {
     
 }
 
-
 .socials{
   text-align: center;
 }
 
+.projects{
+  padding:5px;
+  text-align: center;
+  margin-left: 10%;
+  width:80%;
+  background-color:#222;
+  color:white;
+  margin-top: 10px;
+  height:630px;
+  object-fit: cover;
+}
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+  gap: 5px; /* Adjust the gap between images */
+  text-align: center; /* Center-align labels */
+  padding: 2%;
+}
 
+.project-grid img {
+  width: 100%; /* Ensure images take up the available space */
+  height: auto; /* Maintain aspect ratio */
+}
 
+.image-label {
+  margin-top: 5px; /* Space between image and label */
+  font-size: medium;
+}
